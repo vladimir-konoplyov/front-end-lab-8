@@ -143,7 +143,7 @@ button[type="submit"] {
 
 /*13-th task - Extra task*/
 
-@media screen and (max-width: 1140px), screen and (max-height: 835px) {
+@media screen and (max-width: 1139px), screen and (max-height: 834px) {
 
 .tm-sidebar {
     width: 100%;
