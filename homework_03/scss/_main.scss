@@ -40,6 +40,7 @@ a {
     color: $linksColor;
 }
 
+// Mixin for images border
 @mixin imgBorder($floatPosition, $borderColor) {
     float: $floatPosition;
     padding: 2px;
@@ -56,6 +57,7 @@ a {
      @include imgBorder($floatRight, $imgBorderColor);
 }
 
+// Mixin for brief styling
 @mixin briefStyle ($width, $float, $marginRight, $marginBottom, $padding, $background, $color) {
     max-width: $width;
     float: $float;
@@ -105,6 +107,7 @@ table {
     }
 }
 
+// Mixin set borders for form elements 
 @mixin formBorderStyler($borderColor) {
     border: 1px solid $borderColor;
 }
@@ -137,8 +140,8 @@ form {
         height: 25px;
     }
 
-    & div:nth-child(1),
-    & div:nth-child(2) {
+    & .customer-name,
+      .customer-surname {
         width: 49%;
         display: inline-block;
 
@@ -147,14 +150,15 @@ form {
         }
     }
 
-    & div:nth-child(2) {
+    & .customer-surname {
         margin-left: 10px;
     }
 
-    & div:nth-child(5) {
+    & .customer-message {
         
         & textarea {
             width: 99.5%;
+            height: 150px;
             margin-top: 5px;
             padding: 5px 5px 5px 0;
         }
@@ -177,4 +181,3 @@ form {
         }
     }
 }
-

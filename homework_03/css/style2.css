@@ -75,7 +75,7 @@ table {
       border-right: 0; }
     table tr td {
       padding: 10px 6px 10px 20px;
-      border-bottom: 1px solid #e0e0e0; }
+      border-bottom: 1px solid #94a34e; }
 
 form {
   margin-top: -1px;
@@ -94,15 +94,18 @@ form {
     width: 100%;
     margin-top: 5px;
     height: 25px; }
-  form div:nth-child(1), form div:nth-child(2) {
+  form .customer-name,
+  form .customer-surname {
     width: 49%;
     display: inline-block; }
-    form div:nth-child(1) input[type="text"], form div:nth-child(2) input[type="text"] {
+    form .customer-name input[type="text"],
+    form .customer-surname input[type="text"] {
       padding-right: 6px; }
-  form div:nth-child(2) {
+  form .customer-surname {
     margin-left: 10px; }
-  form div:nth-child(5) textarea {
+  form .customer-message textarea {
     width: 99.5%;
+    height: 150px;
     margin-top: 5px;
     padding: 5px 5px 5px 0; }
   form button {
