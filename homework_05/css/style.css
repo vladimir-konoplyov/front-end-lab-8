@@ -48,8 +48,6 @@ body {
     margin: 0; }
     .menu--footer ul li:nth-child(3) {
       padding-right: 18px; }
-    .menu--footer ul li:nth-child(2) a {
-      text-decoration: none; }
     .menu--footer ul li a {
       font-size: 13px;
       font-weight: bold;
@@ -119,16 +117,20 @@ footer {
   font-weight: 600;
   color: #ffffff; }
 
+/* CSS styles for tablets */
 @media screen and (max-width: 900px) {
+  /* Vertical centering */
   .flex-vertikal-align {
     display: flex;
     flex-direction: column;
     align-items: center; }
 
+  /* Horizontal centering */
   .flex-horizontal-centered {
     display: flex;
     justify-content: center; }
 
+  /* Logo */
   .logo,
   .menu {
     float: none; }
@@ -136,6 +138,7 @@ footer {
   .logo {
     padding: 30px 0 20px; }
 
+  /* Main menu */
   .menu {
     margin: 0;
     padding-bottom: 26px; }
@@ -144,6 +147,7 @@ footer {
       .menu ul li:last-child {
         padding-right: 0px; }
 
+  /* Banner block */
   .banner-text {
     width: 50%;
     text-align: center;
@@ -152,6 +156,7 @@ footer {
     font-weight: 600;
     letter-spacing: -0.5px; }
 
+  /* News block */
   .news-wrapper {
     justify-content: space-around;
     align-items: stretch; }
@@ -169,6 +174,7 @@ footer {
     .news-item p {
       padding-bottom: 20px; }
 
+  /* FOOTER */
   footer {
     margin-top: 14px; }
 
@@ -177,7 +183,9 @@ footer {
 
   .copyright {
     word-spacing: -1px; } }
+/* CSS styles for mobiles */
 @media screen and (max-width: 575px) {
+  /* Logo */
   .logo {
     margin: 0 auto;
     padding: 10px 0 2px;
@@ -185,10 +193,12 @@ footer {
     .logo img {
       width: 100%; }
 
+  /* Vertical centering disable*/
   .flex-vertikal-align {
     display: block;
     text-align: center; }
 
+  /* Main menu */
   .menu:not(.menu--footer) {
     float: none;
     margin: 0;
@@ -218,6 +228,7 @@ footer {
           transition: linear .2s;
           color: #39c2d7; }
 
+  /* Footer menu */
   .menu--footer {
     margin: 0;
     padding-bottom: 14px; }
@@ -228,8 +239,6 @@ footer {
       text-align: center;
       background: #39c2d7;
       border: none; }
-      .menu--footer ul li:nth-child(2) a {
-        text-decoration: underline; }
       .menu--footer ul li a {
         font-size: 13px;
         font-weight: bold;
@@ -240,6 +249,7 @@ footer {
           color: #ffffff;
           text-decoration: none; }
 
+  /* Banner block */
   .banner {
     padding: 152px 5px 20px; }
 
@@ -252,6 +262,7 @@ footer {
     letter-spacing: -0.1px;
     background: #39c2d7; }
 
+  /* News block */
   .news-wrapper {
     justify-content: center; }
 
