@@ -7,9 +7,9 @@ square - square of triangle
 
 (function() {
 
-    var a = Number(prompt("Enter value first triangle side: "));
-    var b = Number(prompt("Enter value second triangle side: "));
-    var c = Number(prompt("Enter value third triangle side: "));
+    var a = Number(prompt("Enter value first triangle side: ", "0"));
+    var b = Number(prompt("Enter value second triangle side: ", "0"));
+    var c = Number(prompt("Enter value third triangle side: ", "0"));
     var square, triangleType;
    
    // Function is finding square of triangle

@@ -5,8 +5,8 @@ Source: https://finance.i.ua/nbu */
 
 (function() {
 
-var euroAmount = Number(prompt("Enter amount of EURO: "));
-var dollarAmount = Number(prompt("Enter amount of USD: "));
+var euroAmount = Number(prompt("Enter amount of EURO: ", "0"));
+var dollarAmount = Number(prompt("Enter amount of USD: ", "0"));
 var euroExchange, dollarExchange, euroToDollar;
 
 // 1 EURO is equal 33.8565 UAH
