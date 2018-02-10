@@ -23,7 +23,6 @@ if (!startGameQuestion) {
         currentPrize = possiblePrize;
         // Set random number, that user should guess 
         var randomNumber = Number(Math.random() * rangeEnd).toFixed(0);
-        // console.log("Random number: ", randomNumber);
         // Set 3 attempts to guess number
         for (var i = 1; i <= 3; i++) {
             var enteredNumber = prompt("Enter a number from " + rangeStart + "to " + rangeEnd + "\nAttempts left: " + i + "\nTotal prize: " + sumWin + "$" + "\nPossible prize on current attempt: " + currentPrize + "$", "0");
