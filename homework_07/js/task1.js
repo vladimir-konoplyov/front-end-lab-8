@@ -3,7 +3,7 @@
 (function() {
 
 // User set the number of floors for piramid   
-var floor = parseInt(prompt('Enter natural number of piramida floor (from 0 to 20)'));
+var floor = Number(prompt('Enter natural number of piramida floor (from 0 to 20)'));
 var piramid = [];
 
 // Cheking input data
