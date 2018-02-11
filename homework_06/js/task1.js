@@ -49,9 +49,7 @@ square - square of triangle
                 return;
             }
             // Checking square of triangle by integer or float numbers
-            if (square % 2 === 0) {
-                square = square;
-            } else {
+            if (square % 2 !== 0) {
                 square = square.toFixed(2);
             }
             // Execute function checkTriangleType
