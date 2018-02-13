@@ -3,30 +3,29 @@
 (function() {
 
 // User set the number of floors for piramid   
-var floor = Number(prompt('Enter natural number of piramida floor (from 0 to 20)'));
-var piramid = [];
+var floor = Number(prompt('Enter natural number of piramid floor (from 1 to 20)'));
+var piramid = "";
 
 // Cheking input data
-if (isNaN(floor) || floor < 0) {
+if (isNaN(floor) || floor % 2 !== 0 || floor <= 0 || floor > 20) {
     console.log('Incorrect data!');
-}
+} else {
 // The number of iteration for piramid building are equal input "floor"
-for (var i = 0; i < floor; i++) {
-    var space = "", vertex = "";
-// Output spaces for each floor
-    for (var j = 0; j < floor - i; j++) { 
-        space = space + "   " ;
+    for (var i = 0; i < floor; i++) {
+        var space = "", vertex = "";
+        // Output spaces for each floor
+        for (var j = 0; j < floor - i; j++) { 
+            space = space + "   " ;
+        }
+        // Output vertixes '[~]' for each floor
+        for (var k = 0; k < 2 * i + 1; k++) {
+         vertex = vertex + "[~]" ;
+        }
+        // Creating piramid    
+        piramid = piramid + space + vertex + "\n";
     }
-// Output vertixes '[~]' for each floor
-    for (var k = 0; k < 2 * i + 1; k++) {
-     vertex = vertex + "[~]" ;
-    }
-    piramid[i] = space + vertex;
-}
-
 // Output piramid
-for (var x = 0; x < piramid.length; x ++) {
-    console.log(piramid[x]);
+console.log(piramid);
 }
 
 })();
