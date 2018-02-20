@@ -1,9 +1,9 @@
 function collectIds(movies) {
-    let newArray = [];
-    getFilteredArray(movies, function(movies) {
-        if (movies.rating > 3.0) {
-            newArray.push(movies.id);
-        }
+    let newArray = [] = getFilteredArray(movies, function(movies) {
+        return movies.rating > 3.0;
     });
-    return newArray;
+    let result = [] = getTransformedArray(newArray, function(elem) {
+        return elem.id;
+    });
+    return result;
 }
