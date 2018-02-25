@@ -54,6 +54,7 @@ function fighter(obj) {
                if (!this.block()) { 
                 enemy.getStats().hp = enemy.getStats().hp - obj.attack;
                 if (enemy.getStats().hp <= 0) {
+                    enemy.getStats().hp = 0;
                     CombatHistory.wins++;
                     enemy.getCombatHistory().loses++;
                 }
