@@ -1,6 +1,15 @@
 var rootNode = document.getElementById("root");
 
 function filesTree(obj) {
+
+    function isObjectEmpty(obj) {
+        for (var key in obj) {
+            return false;
+        }
+        return true;
+    }
+    
+    if (isObjectEmpty(obj)) return;
     let ul = document.createElement("ul");
     for (var key in obj) {
         let li = document.createElement("li");
