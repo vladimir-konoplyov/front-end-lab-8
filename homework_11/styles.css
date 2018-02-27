@@ -1,0 +1,49 @@
+#root > ul {
+    display: block;
+}
+
+ul {
+    display: none;
+    padding-left: 12px;
+}
+
+li {
+    list-style-type: none;
+}
+
+div {
+    cursor: pointer;
+}
+
+ul div:hover {
+    background: #efefef;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
+i + p {
+    display: inline;
+}
+
+.folder {
+    vertical-align: bottom;
+    color: #edbc0b;
+}
+
+.file {
+    vertical-align: bottom;
+    color: #bbbbbb;
+}
+
+.empty-item {
+    padding-left: 10px;
+    font-style: italic;
+}
+
+.show {
+    display: block;
+}
