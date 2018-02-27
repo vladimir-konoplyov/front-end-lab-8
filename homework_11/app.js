@@ -43,7 +43,6 @@ function filesTree(obj) {
         });
     }
     return ul;
-    ul.style.display === "none";
 }
 
 rootNode.appendChild(filesTree(structure));
