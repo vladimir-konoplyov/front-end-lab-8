@@ -65,7 +65,7 @@
                 tankDetailsName.innerHTML = "<img src=" + tankCountryFlag + " />" + " " + takedTankName + " " + "level (" + tanks[j].level + ")";
                 tankDetailWrapper.innerHTML = "<img src=" + tankImage  + " />";
                 tankTableWrapper.innerHTML = "<div><table><caption>Characteristic</caption><tr><td>damage</td><td>" + tanks[j].details.damage + "</td></tr><tr><td>breoning</td><td>" + tanks[j].details.breoning + " </td></tr><tr><td>attack speed</td><td>" + tanks[j].details.attack_speed + "</td></tr><tr><td>time of targeting</td><td>" + tanks[j].details.time_of_targeting + "</td></tr><tr><td>ammunition</td><td>" + tanks[j].details.ammunition + "</td></tr></table></div>";
-                }
+            }
         }
 
         detailsWrapper.appendChild(tankDetailsName); 

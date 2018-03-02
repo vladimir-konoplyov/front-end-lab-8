@@ -69,8 +69,7 @@ td {
 }
 
 .tank-info span,
-.tank-info p,
-.back  {
+.tank-info p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -79,10 +78,19 @@ td {
     color: #d6d1ba;
 }
 
-.back {
-    margin-bottom: 100px;
+.prev {
     padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #d6d1ba;
+}
+
+.back {
+    margin: 30px 0 100px;
+    padding-left: 20px;
+    font-weight: bold;
     text-transform: none;
+    color: #d6d1ba;
 }
 
 .back:hover {
