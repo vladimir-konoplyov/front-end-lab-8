@@ -33,7 +33,6 @@
             tankWrapper.onclick = function(){
                 hashVariable = obj[key].model;
             };
-
          }
         return thumbnailsWrapper;
     }
@@ -42,7 +41,7 @@
         var tankDetailWrapper = document.createElement("div");
         var tankDetailsName = document.createElement("h1");
         var tankTableWrapper = document.createElement("div");
-        var characteristic = document.createElement("p");
+        var prev = document.createElement("p");
         var back = document.createElement("p");
         var takedTankName = location.hash.slice(1);
         var tankImage, tankCountryFlag;;
@@ -51,32 +50,31 @@
         tankDetailsName.className = "tank-info-details";
         tankDetailWrapper.className = "tank-big-image inline-block";
         tankTableWrapper.className = "table inline-block";
+        prev.innerHTML = "Preview";
+        prev.className = "prev";
         back.innerHTML = "Back to list view";
         back.className = "back";
         back.addEventListener("click", function(){
              window.history.go();
         });
-        characteristic.innerHTML = "Characteristic";
-        characteristic.className = "characteristic";
-
-        detailsWrapper.appendChild(tankDetailsName); 
-        detailsWrapper.appendChild(tankDetailWrapper); 
-        tankTableWrapper.appendChild(characteristic);
-        detailsWrapper.appendChild(tankTableWrapper); 
-        detailsWrapper.appendChild(back); 
 
         for (var j in tanks) {
             tankCountryFlag = obj[j].country_image;
             tankImage = obj[j].preview;
             if (takedTankName === tanks[j].model) {
-                console.log(tanks[j].details.damage);
                 tankDetailsName.innerHTML = "<img src=" + tankCountryFlag + " />" + " " + takedTankName + " " + "level (" + tanks[j].level + ")";
                 tankDetailWrapper.innerHTML = "<img src=" + tankImage  + " />";
                 tankTableWrapper.innerHTML = "<div><table><caption>Characteristic</caption><tr><td>damage</td><td>" + tanks[j].details.damage + "</td></tr><tr><td>breoning</td><td>" + tanks[j].details.breoning + " </td></tr><tr><td>attack speed</td><td>" + tanks[j].details.attack_speed + "</td></tr><tr><td>time of targeting</td><td>" + tanks[j].details.time_of_targeting + "</td></tr><tr><td>ammunition</td><td>" + tanks[j].details.ammunition + "</td></tr></table></div>";
                 }
-            }
-         rootNode.appendChild(detailsWrapper);
-         return detailsWrapper;
+        }
+
+        detailsWrapper.appendChild(tankDetailsName); 
+        detailsWrapper.appendChild(prev);
+        detailsWrapper.appendChild(tankDetailWrapper); 
+        detailsWrapper.appendChild(tankTableWrapper); 
+        detailsWrapper.appendChild(back); 
+        rootNode.appendChild(detailsWrapper);
+        return detailsWrapper;
     }
 
     window.onhashchange = function(){
